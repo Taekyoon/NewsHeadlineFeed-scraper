@@ -16,7 +16,7 @@ class bbcRSSSpider(scrapy.Spider):
             item['description'] = rss_item.xpath('description/text()').extract()
             item['link'] = rss_item.xpath('link/text()').extract()
             item['pubDate'] = rss_item.xpath('pubDate/text()').extract()
-            if rss_item.xpath('guid/@isPermaLink').extract() is 'true':
+            if rss_item.xpath('guid/@isPermaLink').extract()[0] == 'true':
                 item['guid'] =  rss_item.xpath('guid/text()').extract()
             else:
                 item['guid'] = "None"
