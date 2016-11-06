@@ -1,6 +1,6 @@
 import scrapy
 
-from bbcnews.items import BbcnewslinkItem
+from rssnews.items import BbcnewslinkItem
 
 
 class bbcRSSSpider(scrapy.Spider):
@@ -20,7 +20,5 @@ class bbcRSSSpider(scrapy.Spider):
             item['pubDate'] = rss_item.xpath('pubDate/text()').extract()
             if rss_item.xpath('guid/@isPermaLink').extract()[0] == 'true':
                 item['guid'] = rss_item.xpath('guid/text()').extract()
-            else:
-                item['guid'] = "None"
-
+                
             yield item

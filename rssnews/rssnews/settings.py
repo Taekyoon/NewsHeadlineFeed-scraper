@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for bbcnews project
+# Scrapy settings for rssnews project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'bbcnews'
+BOT_NAME = 'rssnews'
 
-SPIDER_MODULES = ['bbcnews.spiders']
-NEWSPIDER_MODULE = 'bbcnews.spiders'
+SPIDER_MODULES = ['rssnews.spiders']
+NEWSPIDER_MODULE = 'rssnews.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'bbcnews (+http://www.yourdomain.com)'
+#USER_AGENT = 'rssnews (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'bbcnews.middlewares.MyCustomSpiderMiddleware': 543,
+#    'rssnews.middlewares.MyCustomSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'bbcnews.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'rssnews.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,12 +64,12 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = { 'bbcnews.pipelines.BbcnewsPipeline': 300, }
+# ITEM_PIPELINES = { 'rssnews.pipelines.BbcnewsPipeline': 300, }
 
 MONGODB_SERVER = "192.168.59.103"
 MONGODB_PORT = 27017
-MONGODB_DB = "bbcrss"
-MONGODB_COLLECTION = "links"
+MONGODB_DB = "rssnews"
+MONGODB_COLLECTION = "contents"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
