@@ -64,10 +64,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = { 'rssnews.pipelines.BbcnewsPipeline': 300, }
+ITEM_PIPELINES = { 'rssnews.pipelines.BbcnewsPipeline': 300, }
 
-MONGODB_SERVER = "192.168.59.103"
-MONGODB_PORT = 27017
+MONGODB_SERVER = "127.0.0.1"
+MONGODB_PORT = 30001
 MONGODB_DB = "rssnews"
 MONGODB_COLLECTION = "contents"
 

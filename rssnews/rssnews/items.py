@@ -16,6 +16,7 @@ class RssnewslinkItem(scrapy.Item):
     link = scrapy.Field()
     guid = scrapy.Field()
     pubDate = scrapy.Field()
+    Read = scrapy.Field()
     pass
 
 class BbcnewslinkItem(RssnewslinkItem):
